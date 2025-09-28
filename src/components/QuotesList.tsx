@@ -91,7 +91,7 @@ const QuotesList: React.FC<QuotesProps> = ({ quotes, total, skip, limit }) => {
               </div>
               <span className="text-gray-400">of</span>
               <div className="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm font-medium">
-                {Math.ceil(total / limit)}
+                {isNaN(Math.ceil(total / limit)) ? 0 : Math.ceil(total / limit)}
               </div>
             </div>
           </div>
